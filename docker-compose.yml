@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      # Aquí puedes agregar tus variables de entorno o conexión a base de datos
+
+  frontend:
+    build: ./Notiapp/Notiii
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
