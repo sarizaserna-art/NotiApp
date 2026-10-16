@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
 // Helper para validar si la respuesta es JSON antes de parsearla
 const handleResponse = async (response, fallbackErrorMsg) => {
