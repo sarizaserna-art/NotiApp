@@ -26,7 +26,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/reports', reportRoutes);
 
 // Puerto
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 // Comprobar conexión con PostgreSQL
 pool.query('SELECT NOW()')
@@ -41,5 +41,5 @@ pool.query('SELECT NOW()')
 
 // Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor ejecutándose en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
