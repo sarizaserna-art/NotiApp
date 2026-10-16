@@ -1,4 +1,4 @@
-# NotiApp Bogotá — Plataforma Web de Gestión de Incidencias Urbanas
+# NotiApp Bogotá 
 
 ## Descripción del proyecto
 
