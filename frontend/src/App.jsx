@@ -8,7 +8,7 @@ import EntityPanel from "../components/EntityPanel";
 import ReportForm from "../components/ReportForm";
 import Reports from "../components/Reports";
 import Notibot from "../components/Notibot";
-import Toast from "../components/Toast";
+import Toast from "../components/toast";
 import Footer from "../components/Footer";
 
 export default function App() {
