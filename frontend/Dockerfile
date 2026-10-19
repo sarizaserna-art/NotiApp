@@ -1,14 +1,16 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY package*.json ./
-
 RUN npm install
 
 COPY . .
 
-EXPOSE 5173
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
 
-# Usamos host 0.0.0.0 para que Docker permita acceder desde fuera del contenedor
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+RUN npm run build
+RUN npm install -g serve
+
+CMD ["sh", "-c", "serve -s dist -l ${PORT:-3000}"]
